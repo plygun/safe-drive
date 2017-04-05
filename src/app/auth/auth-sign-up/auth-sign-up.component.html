@@ -1,0 +1,38 @@
+<form [ngClass]="'sign-up-form'" [formGroup]="signUpForm" (ngSubmit)="signUp()">
+    <div>
+        <md-input type="email" name="email" id="email" placeholder="Email" [formControl]="email"></md-input>
+        <div *ngIf="email.invalid && email.touched" [ngClass]="'red'">
+            <div *ngIf="email.hasError('required')">
+                Email is required.
+            </div>
+        </div>
+    </div>
+    <div>
+        <md-input type="password" name="password" id="password" placeholder="Password" [formControl]="password" #passwordField>
+            <md-hint *ngIf="passwordField.characterCount" align="end">{{passwordField.characterCount}}</md-hint>
+        </md-input>
+        <div *ngIf="password.invalid && password.touched" [ngClass]="'red'">
+            <div *ngIf="password.hasError('required')">Password is required.</div>
+            <div *ngIf="password.hasError('minlength')">Password can not be shorter than 5 characters.</div>
+        </div>
+    </div>
+    <div>
+        <md-input type="password" name="password_check" id="password_check" placeholder="Password Repeat" [formControl]="passwordCheck" #passwordCheckField>
+            <md-hint *ngIf="passwordCheckField.characterCount" align="end">{{passwordCheckField.characterCount}}</md-hint>
+        </md-input>
+        <div *ngIf="passwordCheck.invalid && passwordCheck.touched && password.touched" [ngClass]="'red'">
+            <div *ngIf="passwordCheck.hasError('required')">
+                Repeat password, please.
+            </div>
+        </div>
+        <div *ngIf="password.valid && passwordCheck.valid" [ngClass]="'red'">
+            <div *ngIf="signUpForm.hasError('passwordsMismatch')">
+                The two passwords aren't the same.
+            </div>
+        </div>
+    </div>
+    <div *ngIf="signUpErrorMessage" [ngClass]="'red'">
+        <div>{{ signUpErrorMessage }}</div>
+    </div>
+    <button md-raised-button color="primary" [disabled]="!signUpForm.valid">Sign Up</button>
+</form>

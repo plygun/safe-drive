@@ -1,0 +1,38 @@
+<md-list *ngIf="(type == 'show') && existingObstacle">
+    <md-list-item>
+        <h1>{{ existingObstacle.name }}</h1>
+    </md-list-item>
+    <md-list-item>
+        <p>{{ existingObstacle.description }}</p>
+    </md-list-item>
+    <md-list-item>
+        <button md-raised-button color="warn" (click)="deleteObstacle(existingObstacle.$key)">Delete Obstacle</button>
+        <button md-raised-button color="accent" (click)="dialogClose()">Close Dialog</button>
+    </md-list-item>
+</md-list>
+
+<form *ngIf="type == 'edit'" [ngClass]="'create-obstacle-form'" [formGroup]="createObstacleForm" (ngSubmit)="createObstacle()">
+    <md-list>
+        <md-list-item>
+            <md-input [formControl]="name" placeholder="Obstacle name">
+                <md-hint *ngIf="name.invalid && name.touched" [ngClass]="'red'">
+                    <div *ngIf="name.hasError('required')">Obstacle name is required.</div>
+                </md-hint>
+            </md-input>
+        </md-list-item>
+        <md-list-item>
+            <md-textarea [formControl]="description">
+                <md-hint *ngIf="description.invalid && description.touched" [ngClass]="'red'">
+                    <div *ngIf="description.hasError('required')">Obstacle description is required.</div>
+                </md-hint>
+            </md-textarea>
+        </md-list-item>
+        <md-list-item>
+            <input type="file" name="images" multiple [formControl]="images">
+        </md-list-item>
+        <md-list-item>
+            <button md-raised-button color="primary" [disabled]="!createObstacleForm.valid">Create Obstacle</button>
+            <button type="button" md-raised-button color="accent" (click)="dialogClose()">Close Dialog</button>
+        </md-list-item>
+    </md-list>
+</form>

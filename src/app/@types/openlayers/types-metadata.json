@@ -1,0 +1,25 @@
+{
+    "authors": "Wouter Goedhart <https://github.com/woutergd>",
+    "definitionFilename": "index.d.ts",
+    "libraryDependencies": [],
+    "moduleDependencies": [],
+    "libraryMajorVersion": "3",
+    "libraryMinorVersion": "6",
+    "libraryName": "OpenLayers v3.6.0",
+    "typingsPackageName": "openlayers",
+    "projectName": "http://openlayers.org/",
+    "sourceRepoURL": "https://www.github.com/DefinitelyTyped/DefinitelyTyped",
+    "sourceBranch": "types-2.0",
+    "kind": "Mixed",
+    "globals": [
+        "ol"
+    ],
+    "declaredModules": [
+        "openlayers"
+    ],
+    "files": [
+        "index.d.ts"
+    ],
+    "hasPackageJson": false,
+    "contentHash": "326f6eb67078a5cf7abd0241d81778689f691014f756b901340cec879403aaf4"
+}

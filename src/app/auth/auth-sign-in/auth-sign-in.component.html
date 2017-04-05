@@ -1,0 +1,18 @@
+<form [ngClass]="'sign-in-form'" [formGroup]="signInForm" (ngSubmit)="signIn()">
+    <div>
+        <md-input type="email" name="email" id="email" [formControl]="email" placeholder="Email"></md-input>
+        <div *ngIf="email.invalid && email.touched" [ngClass]="'red'">
+            <div *ngIf="email.hasError('required')">Email is required.</div>
+        </div>
+    </div>
+    <div>
+        <md-input type="password" name="password" id="password" [formControl]="password" placeholder="Password"></md-input>
+        <div *ngIf="password.invalid && password.touched" [ngClass]="'red'">
+            <div *ngIf="password.hasError('required')">Password is required.</div>
+        </div>
+    </div>
+    <div *ngIf="signInErrorMessage" [ngClass]="'red'">
+        <div>{{ signInErrorMessage }}</div>
+    </div>
+    <button md-raised-button color="primary" [disabled]="!signInForm.valid">Sign In</button>
+</form>

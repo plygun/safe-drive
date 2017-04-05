@@ -1,0 +1,30 @@
+<md-grid-list cols="1" rowHeight="50px">
+    <md-grid-tile>
+        <md-tab-group [selectedIndex]="tabSelected" (focusChange)="tabChanged($event)">
+            <md-tab routerLinkActive="'md-tab-active'" routerLinkActiveOptions="{exact: true}" *ngIf="(auth.isLoggedIn() | async)">
+                <template md-tab-label>
+                    <a routerLink="/">Map</a>
+                </template>
+            </md-tab>
+            <md-tab routerLinkActive="'md-tab-active'" *ngIf="!(auth.isLoggedIn() | async)">
+                <template md-tab-label>
+                    <a routerLink="/auth/sign-in">Sign In</a>
+                </template>
+            </md-tab>
+            <md-tab routerLinkActive="'md-tab-active'" *ngIf="!(auth.isLoggedIn() | async)">
+                <template md-tab-label>
+                    <a routerLink="/auth/sign-up">Sign Up</a>
+                </template>
+            </md-tab>
+            <md-tab routerLinkActive="'md-tab-active'" *ngIf="(auth.isLoggedIn() | async)">
+                <template md-tab-label>
+                    <a routerLink="/auth/logout">Logout</a>
+                </template>
+            </md-tab>
+        </md-tab-group>
+    </md-grid-tile>
+</md-grid-list>
+
+
+
+

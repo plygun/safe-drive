@@ -1,0 +1,77 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "@types/openlayers@3.6.32",
+        "scope": "@types",
+        "escapedName": "@types%2fopenlayers",
+        "name": "@types/openlayers",
+        "rawSpec": "3.6.32",
+        "spec": "3.6.32",
+        "type": "version"
+      },
+      "c:\\Programok\\wamp\\www\\ng2-bundle-test"
+    ]
+  ],
+  "_from": "@types/openlayers@3.6.32",
+  "_id": "@types/openlayers@3.6.32",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/@types/openlayers",
+  "_npmOperationalInternal": {
+    "host": "packages-12-west.internal.npmjs.com",
+    "tmp": "tmp/openlayers-3.6.32.tgz_1472151123632_0.6644034534692764"
+  },
+  "_npmUser": {
+    "name": "types",
+    "email": "ts-npm-types@microsoft.com"
+  },
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "@types/openlayers@3.6.32",
+    "scope": "@types",
+    "escapedName": "@types%2fopenlayers",
+    "name": "@types/openlayers",
+    "rawSpec": "3.6.32",
+    "spec": "3.6.32",
+    "type": "version"
+  },
+  "_requiredBy": [
+    "#DEV:/"
+  ],
+  "_resolved": "https://registry.npmjs.org/@types/openlayers/-/openlayers-3.6.32.tgz",
+  "_shasum": "08a8b923dedaf47b25b649336c51e6cc9424f517",
+  "_shrinkwrap": null,
+  "_spec": "@types/openlayers@3.6.32",
+  "_where": "c:\\Programok\\wamp\\www\\ng2-bundle-test",
+  "author": {
+    "name": "Wouter Goedhart",
+    "email": "https://github.com/woutergd"
+  },
+  "dependencies": {},
+  "description": "TypeScript definitions for OpenLayers v3.6.0",
+  "devDependencies": {},
+  "directories": {},
+  "dist": {
+    "shasum": "08a8b923dedaf47b25b649336c51e6cc9424f517",
+    "tarball": "https://registry.npmjs.org/@types/openlayers/-/openlayers-3.6.32.tgz"
+  },
+  "license": "MIT",
+  "main": "",
+  "maintainers": [
+    {
+      "name": "types",
+      "email": "ryan.cavanaugh@microsoft.com"
+    }
+  ],
+  "name": "@types/openlayers",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "https://www.github.com/DefinitelyTyped/DefinitelyTyped.git"
+  },
+  "scripts": {},
+  "typings": "index.d.ts",
+  "version": "3.6.32"
+}
